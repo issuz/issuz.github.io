@@ -247,6 +247,140 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://issuz.github.io/2017/04/02/洗牌算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="issuz">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/myPhoto.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="issuz's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/02/洗牌算法/" itemprop="url">
+                  洗牌算法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T23:30:37+08:00">
+                2017-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数组的打乱算法Fisher–Yates"><a href="#数组的打乱算法Fisher–Yates" class="headerlink" title="数组的打乱算法Fisher–Yates"></a>数组的打乱算法Fisher–Yates</h1><p>我们要做的仅仅是将数组元素重新排序，已经取出来的元素和剩下的元素之和一定是等于数组原来的总元素个数的。所以可以考虑不创建新的数组来保存已经抽取的元素，可以这样，随机从数组中抽出一个元素，然后与最后个元素交换，相当于把这个随机抽取的元素放到了数组最后面去，表示它已经是被随机过了，同时被换走的那个元素跑到前面去了，会在后续的重复操作中被随机掉。一轮操作过后，下一轮我们只在剩下的n-1个元素也就是数组的前n-1个元素中进行相同的操作，直到进行到第一个。</p>
+<pre><code>function shuffle(array) {
+  var m = array.length,t, i;
+  // 如果还剩有元素…
+  while (m) {
+  // 随机选取一个元素…
+  i = Math.floor(Math.random() * m--);
+  // 与当前元素进行交换
+  t = array[m];
+  array[m] = array[i];
+  array[i] = t;
+  }
+  return array;
+}
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://issuz.github.io/2017/03/25/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -412,7 +546,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
